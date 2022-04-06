@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="538.0" prefWidth="1176.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="c482.DashboardController">
+    <children>
+        <Button fx:id="addPart" layoutX="225.0" layoutY="381.0" onAction="#addNewPart" text="Add New" />
+      <TableView fx:id="partTable" layoutX="56.0" layoutY="165.0" prefHeight="200.0" prefWidth="470.0">
+        <columns>
+          <TableColumn fx:id="partIdColumn" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="partNameColumn" prefWidth="122.0" text="Name" />
+            <TableColumn fx:id="partStockColumn" prefWidth="115.0" text="Inv Level" />
+            <TableColumn fx:id="partPriceColumn" prefWidth="157.0" text="Price per Unit" />
+        </columns>
+      </TableView>
+      <Label layoutX="74.0" layoutY="139.0" text="Parts" />
+      <Label layoutX="662.0" layoutY="139.0" text="Products" />
+      <TableView fx:id="productTable" layoutX="651.0" layoutY="165.0" prefHeight="200.0" prefWidth="470.0">
+         <columns>
+            <TableColumn fx:id="productIdColumn" prefWidth="75.0" text="Product ID" />
+            <TableColumn fx:id="productNameColumn" prefWidth="116.0" text="Name" />
+            <TableColumn fx:id="productStockColumn" prefWidth="144.0" text="Inv Level" />
+            <TableColumn fx:id="productPriceColumn" prefWidth="134.0" text="Price per Unit" />
+         </columns>
+      </TableView>
+      <Button fx:id="modifyPart" layoutX="327.0" layoutY="381.0" onAction="#modifyPart" text="Modify Exisiting" />
+      <Button fx:id="deletePart" layoutX="451.0" layoutY="382.0" onAction="#deletePart" text="Delete Part" />
+      <Button fx:id="addProduct" layoutX="802.0" layoutY="382.0" onAction="#addNewProduct" text="Add New" />
+      <Button fx:id="modifyProduct" layoutX="901.0" layoutY="382.0" onAction="#modifyProduct" text="Modify Existing" />
+      <Button fx:id="deleteProduct" layoutX="1028.0" layoutY="381.0" onAction="#deleteProduct" text="Delete Product" />
+      <Button fx:id="exit" layoutX="1088.0" layoutY="479.0" onAction="#exit" text="Exit" />
+      <TextField fx:id="partSearch" layoutX="342.0" layoutY="135.0" prefHeight="25.0" prefWidth="184.0" promptText="Seach by Part ID or Name" />
+      <TextField fx:id="productSearch" layoutX="937.0" layoutY="135.0" prefHeight="25.0" prefWidth="184.0" promptText="Search by Product ID or Name" />
+      <Label layoutX="87.0" layoutY="31.0" prefHeight="28.0" prefWidth="446.0" text="Inventory Management System">
+         <font>
+            <Font name="Arial Bold" size="19.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
